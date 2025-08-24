@@ -506,6 +506,37 @@ $('#galleryCarousel').on('slide.bs.carousel', function (e) {
     offset: 100
   });
 </script>
+<style>
+/* 갤러리 안정화 */
+.carousel-inner {
+    height: 400px;
+}
+
+.carousel-inner .carousel-item {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-inner img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 768px) {
+    .carousel-inner {
+        height: 300px;
+    }
+    
+    .carousel-inner .carousel-item {
+        height: 300px;
+    }
+}
+</style>
 <div class="bottom_right"><i class="fa fa-arrow-up fa-2x" id="go-to-top"></i>
 </div>
 
