@@ -9769,7 +9769,7 @@ body {
     background-size: cover;
     background-position: 50%;
     height: 100vh;
-    min-height: 480px;
+    min-height: 450px;
 }
 
 .ww-home-page .ww-wedding-announcement {
@@ -9817,7 +9817,7 @@ body {
     width: 100%;
     height: 100%;
     height: 100vh;
-    min-height: 480px;
+    min-height: 450px;
     position: absolute;
     left: 0;
     top: 0;
@@ -10119,7 +10119,7 @@ td:nth-child(7) {
 }
 
 #galleryCarousel {
-    min-height: 520px; /* 이미지 높이 + 여백 */
+    min-height: 500px; /* 이미지 높이 + 여백 */
 }
 
 #galleryCarousel img {
