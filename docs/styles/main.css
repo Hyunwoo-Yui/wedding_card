@@ -9769,16 +9769,8 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/m-pic-5.JPG") no-repeat center center;
     background-size: cover;
     background-position: 50%;
-    height: 100dvh;
-    min-height: 480px;
-
     height: 100vh;
-    height: 100dvh;
-
-    /* 추가: 고정된 배경 효과 */
-    background-attachment: fixed;
-    position: relative;
-    overflow: hidden; /* 넘치는 부분 숨기기 */
+    min-height: 480px;
 }
 
 .ww-home-page .ww-wedding-announcement {
@@ -9823,7 +9815,6 @@ body {
 .ww-home-page:before {
     content: "";
     background-color: rgba(245, 138, 119, 0.2);
-    position: fixed;
     width: 100%;
     height: 100%;
     height: 100vh;
