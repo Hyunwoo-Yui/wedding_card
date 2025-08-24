@@ -508,33 +508,25 @@ $('#galleryCarousel').on('slide.bs.carousel', function (e) {
 </script>
 <style>
 /* 갤러리 안정화 */
-.carousel-inner {
-    height: 400px;
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 비율 */
+    height: 0;
 }
 
-.carousel-inner .carousel-item {
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.carousel-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .carousel-inner img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    border-radius: 10px;
-}
-
-/* 모바일 최적화 */
-@media (max-width: 768px) {
-    .carousel-inner {
-        height: 300px;
-    }
-    
-    .carousel-inner .carousel-item {
-        height: 300px;
-    }
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 컨테이너를 꽉 채움 */
 }
 </style>
 <div class="bottom_right"><i class="fa fa-arrow-up fa-2x" id="go-to-top"></i>
