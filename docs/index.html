@@ -223,8 +223,27 @@
                                 仁川地下鉄1号線 カルサン駅 2番出口より 徒歩1分
                             </label>
                         </div>
-                        <div class="my-3">
+<!--                         <div class="my-3">
                             <div id="daumRoughmapContainer1751327663874" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                        </div> -->
+                        <div style="position: relative;">
+                            <div id="daumRoughmapContainer1751327663874" 
+                                 class="root_daum_roughmap root_daum_roughmap_landing"
+                                 style="pointer-events: none;">
+                            </div>
+                            
+                            <!-- 투명 오버레이 -->
+                            <div class="map-overlay" 
+                                 onclick="this.style.display='none'; document.getElementById('daumRoughmapContainer1751327663874').style.pointerEvents='auto';"
+                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                                        background: rgba(0,0,0,0.1); 
+                                        display: flex; align-items: center; justify-content: center;
+                                        cursor: pointer;">
+                                <div style="background: white; padding: 10px 20px; border-radius: 20px; 
+                                            font-family: 'Noto Serif KR', serif; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                                    📍 지도를 보려면 클릭하세요
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
