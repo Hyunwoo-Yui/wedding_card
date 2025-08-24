@@ -42,15 +42,6 @@
     </style>
 </head>
 <body id="top">
-    <script>
-    document.body.addEventListener('touchstart', function(e) {
-      if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
-        e.preventDefault();
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-      }
-    }, {passive: false});
-    </script>
 <header></header>
 <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2"></script>
@@ -488,6 +479,15 @@
 }
 </style>
 
+<script>
+    document.body.addEventListener('touchstart', function(e) {
+      if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }
+    }, {passive: false});
+</script>
 <script>
 // 우클릭과 드래그 방지
 document.addEventListener('DOMContentLoaded', function() {
