@@ -435,6 +435,7 @@
 .gallery-protected a {
     pointer-events: auto;
 }
+    
 body, .page-content {
     overflow-x: hidden;
   }
@@ -465,7 +466,8 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         return false;
     });
-    F12, Ctrl+Shift+I 방지 (선택사항)
+    
+    // F12, Ctrl+Shift+I 방지 (선택사항)
     document.addEventListener('keydown', function(e) {
         if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
             e.preventDefault();
