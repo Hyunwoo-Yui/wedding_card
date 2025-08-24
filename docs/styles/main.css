@@ -49,6 +49,7 @@ html {
     -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: auto; /* 이번에 추가 0824 */
 }
 
 @-ms-viewport {
