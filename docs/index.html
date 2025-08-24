@@ -40,8 +40,16 @@
         touch-action: pan-y !important;
     } 
     </style>
+    <script>
+    document.body.addEventListener('touchstart', function(e) {
+      if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }
+    }, {passive: false});
+    </script>
 </head>
-
 <body id="top">
 <header></header>
 <div id="fb-root"></div>
@@ -541,15 +549,7 @@ $('#galleryCarousel').on('slide.bs.carousel', function (e) {
     offset: 100
   });
 </script>
-<script>
-document.body.addEventListener('touchstart', function(e) {
-  if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
-    e.preventDefault();
-    e.stopPropagation();
-    e.stopImmediatePropagation();
-  }
-}, {passive: false});
-</script>
+
 
 <div class="bottom_right"><i class="fa fa-arrow-up fa-2x" id="go-to-top"></i>
 </div>
