@@ -10112,3 +10112,12 @@ td:nth-child(7) {
   font-family: grape nuts;
 }
 
+.carousel-inner img {
+    max-height: 480px; /* 이미지 자체 높이 제한 */
+    width: auto;
+    max-width: 100%;
+}
+
+#galleryCarousel {
+    min-height: 520px; /* 이미지 높이 + 여백 */
+}
