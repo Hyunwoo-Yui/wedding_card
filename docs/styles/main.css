@@ -49,9 +49,6 @@ html {
     -ms-text-size-adjust: 100%;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: transparent;
-    /* 이번에 추가 AOS 문제 */
-    scroll-behavior: auto !important;
-    overflow-x: hidden;
 }
 
 @-ms-viewport {
@@ -78,9 +75,6 @@ body {
     color: #212529;
     text-align: center;
     background-color: #fff;
-    overflow-x: hidden;
-    /* 스크롤바를 항상 보이도록 설정 (점프 방지) */
-    overflow-y: scroll;
 }
 
 
@@ -9767,43 +9761,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
     font-family: "Dosis", sans-serif;
-}
-
-/* 1. AOS 요소들의 초기 공간 확보 */
-[data-aos] {
-    /* 애니메이션 전에도 실제 크기만큼 공간 차지 */
-    opacity: 0;
-    transform: none !important; /* 초기 transform 제거 */
-    transition: opacity 0.6s ease;
-}
-
-[data-aos].aos-animate {
-    opacity: 1;
-}
-
-/* 2. 특정 AOS 효과들에 대한 수정 */
-[data-aos="fade-up"] {
-    transform: none !important; /* translateY 제거 */
-}
-
-[data-aos="fade-down"] {
-    transform: none !important;
-}
-
-[data-aos="fade-left"] {
-    transform: none !important;
-}
-
-[data-aos="fade-right"] {
-    transform: none !important;
-}
-
-[data-aos="zoom-in"] {
-    transform: none !important; /* scale 제거 */
-}
-
-[data-aos="flip-up"] {
-    transform: none !important;
 }
 
 /* Home Page Style */
