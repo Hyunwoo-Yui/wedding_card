@@ -315,7 +315,7 @@
                     <br>
                     <!-- Bootstrap Carousel -->
                     <div data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300">
-                        <div id="galleryCarousel" class="carousel slide" data-ride="carousel" data-interval="2500">
+                        <div id="galleryCarousel" class="carousel slide" data-ride="carousel" data-interval="2500" data-pause="false">>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div class="text-center">
@@ -437,6 +437,48 @@
         </div>
     </div>
 </footer>
+<style>
+/* 이미지 보호 CSS */
+.gallery-protected {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    pointer-events: none;
+}
+
+.gallery-protected a {
+    pointer-events: auto;
+}
+</style>
+
+<script>
+// 우클릭과 드래그 방지
+document.addEventListener('DOMContentLoaded', function() {
+    const gallery = document.getElementById('galleryCarousel');
+    
+    // 우클릭 방지
+    gallery.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    
+    // 드래그 방지
+    gallery.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+    
+    // F12, Ctrl+Shift+I 방지 (선택사항)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+            e.preventDefault();
+            return false;
+        }
+    });
+});
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
