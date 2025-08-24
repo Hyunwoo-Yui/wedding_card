@@ -451,7 +451,7 @@ body, .page-content {
     }, {passive: false});
 </script>
 <script>
-// 우클릭과 드래그 방지
+// 우클릭 드래그 방지
 document.addEventListener('DOMContentLoaded', function() {
     const gallery = document.getElementById('galleryCarousel');
     
@@ -467,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return false;
     });
     
-    // F12, Ctrl+Shift+I 방지 (선택사항)
+    // F12 방지
     document.addEventListener('keydown', function(e) {
         if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
             e.preventDefault();
