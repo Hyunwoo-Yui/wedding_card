@@ -39,6 +39,156 @@
         touch-action: pan-y !important;
     } 
     </style>
+        </style>
+        <style>
+        .calendar-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin-top: 20px;
+        }
+
+        .calendar-header {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .day-header {
+            text-align: center;
+            font-family: 'Noto Serif KR', serif;
+            font-size: 14px;
+            color: #666;
+            padding: 10px 0;
+            font-weight: 500;
+        }
+
+        .day-cell {
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Serif KR', serif;
+            font-size: 16px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .day-cell.empty {
+            visibility: hidden;
+        }
+
+        .day-cell.weekend {
+            color: #ff6b6b;
+        }
+
+        .day-cell.today {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .day-cell.wedding-day {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transform: scale(1.1);
+        }
+
+        .countdown-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .countdown-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 10px;
+            text-align: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border: 1px solid #f0f0f0;
+        }
+
+        .countdown-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            font-family: 'Noto Serif KR', serif;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.9em;
+            color: #999;
+            margin-top: 8px;
+            font-family: 'Noto Serif KR', serif;
+            letter-spacing: 1px;
+        }
+
+        .wedding-message {
+            text-align: center;
+            margin-top: 25px;
+            font-family: 'Noto Serif KR', serif;
+            color: #666;
+            font-size: 16px;
+        }
+
+        .month-year {
+            text-align: center;
+            font-family: 'Noto Serif KR', serif;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .month-label {
+            text-align: center;
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 480px) {
+            .calendar-container {
+                margin: 0 15px;
+                padding: 15px;
+            }
+            
+            .countdown-container {
+                gap: 10px;
+            }
+            
+            .countdown-item {
+                padding: 15px 8px;
+            }
+            
+            .countdown-number {
+                font-size: 2em;
+            }
+            
+            .countdown-label {
+                font-size: 0.8em;
+            }
+        }
+    </style>
 </head>
 <body id="top">
 <header></header>
@@ -140,63 +290,44 @@
                     <div class="col text-center" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
                         <label style="font-family: 'Noto Serif JP', serif; font-size: 64px;">10</label>
                     </div>
-                    <table class="April" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                        <tr>
-                            <th scope="col">Sun</th>
-                            <th scope="col">Mon</th>
-                            <th scope="col">Tue</th>
-                            <th scope="col">Wed</th>
-                            <th scope="col">Thu</th>
-                            <th scope="col">Fri</th>
-                            <th scope="col">Sat</th>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                            <td>11</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                            <td>16</td>
-                            <td>17</td>
-                            <td>18</td>
-                        </tr>
-                        <tr>
-                            <td>19</td>
-                            <td>20</td>
-                            <td>21</td>
-                            <td>22</td>
-                            <td>23</td>
-                            <td>24</td>
-                            <td>25</td>
-                        </tr>
-                        <tr>
-                            
-                            <td>26</td>
-                            <td>27</td>
-                            <td>28</td>
-                            <td>29</td>
-                            <td>30</td>
-                            <td>31</td>
-                            <td></td>
-                        </tr>
-                    </table>
+                    <div class="calendar-container">
+                        <div class="month-year">10</div>
+                        <!--<div class="month-label">October 2025</div>-->
+                        <div class="calendar-header">
+                            <div class="day-header">일</div>
+                            <div class="day-header">월</div>
+                            <div class="day-header">화</div>
+                            <div class="day-header">수</div>
+                            <div class="day-header">목</div>
+                            <div class="day-header">금</div>
+                            <div class="day-header">토</div>
+                        </div>
+                        
+                        <div class="calendar-grid" id="calendar-grid">
+                        </div>
+                    </div>
+                
+                    <div class="countdown-container">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="days">34</div>
+                            <div class="countdown-label">DAYS</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">6</div>
+                            <div class="countdown-label">HOURS</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">24</div>
+                            <div class="countdown-label">MINUTES</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">13</div>
+                            <div class="countdown-label">SECONDS</div>
+                        </div>
+                    </div>
+                    <div class="wedding-message">
+                        현우 ❤ 유이 결혼식이 <span id="days-text">35</span>일 남았습니다
+                    </div>
                 </div>
             </div>
         </div>
@@ -462,7 +593,91 @@
             user-select: none;
 }
 </style>
+<script>
+        // 달력 생성
+        function generateCalendar() {
+            const calendarGrid = document.getElementById('calendar-grid');
+            const today = new Date();
+            const currentDate = today.getDate();
+            const currentMonth = today.getMonth();
+            const currentYear = today.getFullYear();
+            
+            // 2025년 10월 달력
+            const year = 2025;
+            const month = 9; // 0-based index (9 = October)
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            
+            // 빈 셀들 추가 (월 시작 전)
+            for (let i = 0; i < firstDay; i++) {
+                const emptyCell = document.createElement('div');
+                emptyCell.className = 'day-cell empty';
+                calendarGrid.appendChild(emptyCell);
+            }
+            
+            // 날짜 셀들 추가
+            for (let day = 1; day <= daysInMonth; day++) {
+                const dayCell = document.createElement('div');
+                dayCell.className = 'day-cell';
+                dayCell.textContent = day;
+                
+                const cellDate = new Date(year, month, day);
+                const dayOfWeek = cellDate.getDay();
+                
+                // 주말 스타일링
+                if (dayOfWeek === 0 || dayOfWeek === 6) {
+                    dayCell.classList.add('weekend');
+                }
+                
+                // 오늘 날짜 표시 (현재가 10월이고 같은 연도인 경우)
+                if (currentYear === year && currentMonth === month && currentDate === day) {
+                    dayCell.classList.add('today');
+                }
+                
+                // 결혼식 날짜 표시 (10월 11일)
+                if (day === 11) {
+                    dayCell.classList.add('wedding-day');
+                }
+                
+                calendarGrid.appendChild(dayCell);
+            }
+        }
 
+        // 카운트다운 업데이트
+        function updateCountdown() {
+            const weddingDate = new Date('2025-10-11T10:30:00');
+            const now = new Date();
+            const timeDiff = weddingDate.getTime() - now.getTime();
+            
+            if (timeDiff > 0) {
+                const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days;
+                document.getElementById('hours').textContent = hours;
+                document.getElementById('minutes').textContent = minutes;
+                document.getElementById('seconds').textContent = seconds;
+                document.getElementById('days-text').textContent = days;
+            } else {
+                document.getElementById('days').textContent = '0';
+                document.getElementById('hours').textContent = '0';
+                document.getElementById('minutes').textContent = '0';
+                document.getElementById('seconds').textContent = '0';
+                document.getElementById('days-text').textContent = '0';
+            }
+        }
+
+        // 초기화
+        document.addEventListener('DOMContentLoaded', function() {
+            generateCalendar();
+            updateCountdown();
+            
+            // 1초마다 카운트다운 업데이트
+            setInterval(updateCountdown, 1000);
+        });
+</script>
 <!-- <script>
     document.body.addEventListener('touchstart', function(e) {
       if ( (e.touches.length > 1) || e.targetTouches.length > 1) {
